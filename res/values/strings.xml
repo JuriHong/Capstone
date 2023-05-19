@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">Travel</string>
+    <string name="title_home">Map</string>
+    <string name="title_dashboard">List</string>
+    <string name="title_notifications">Setting</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="title_Road">Road fragment</string>
+    <string name="title_SelectList">SelectList fragment</string>
+    <string name="title_activity_login">LoginActivity</string>
+    <string name="title_SignUp">Sign Up</string>
+    <string name="title_FindID">Find ID</string>
+    <string name="title_FindPW">Find PW</string>
+    <string name="title_NewPW">New PW</string>
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Password</string>
+    <string name="action_sign_in">Sign in or register</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="welcome">"Welcome !"</string>
+    <string name="invalid_username">Not a valid username</string>
+    <string name="invalid_password">Password must be >5 characters</string>
+    <string name="login_failed">"Login failed"</string>
+</resources>

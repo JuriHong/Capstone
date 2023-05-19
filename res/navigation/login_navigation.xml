@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/login_navigation"
+    app:startDestination="@+id/navigation_login">
+
+    <fragment
+        android:id="@+id/navigation_login"
+        android:name="com.example.capstone.LoginFragment"
+        android:label="@string/title_activity_login"
+        tools:layout="@layout/fragment_login">
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_signup"
+        android:name="com.example.capstone.SignUpFragment"
+        android:label="@string/title_SignUp"
+        tools:layout="@layout/fragment_signup">
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_findid"
+        android:name="com.example.capstone.FindIDFragment"
+        android:label="@string/title_FindID"
+        tools:layout="@layout/fragment_findid">
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_findpw"
+        android:name="com.example.capstone.FindPWFragment"
+        android:label="@string/title_FindPW"
+        tools:layout="@layout/fragment_findpw">
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_newpw"
+        android:name="com.example.capstone.NewPWFragment"
+        android:label="@string/title_NewPW"
+        tools:layout="@layout/fragment_newpw">
+
+    </fragment>
+
+</navigation>

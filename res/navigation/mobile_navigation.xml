@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/navigation_Map">
+
+    <fragment
+        android:id="@+id/navigation_Map"
+        android:name="com.example.capstone.HomeFragment"
+        android:label="@string/title_home"
+        tools:layout="@layout/fragment_home">
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_List"
+        android:name="com.example.capstone.DashboardFragment"
+        android:label="@string/title_dashboard"
+        tools:layout="@layout/fragment_dashboard" >
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_Setting"
+        android:name="com.example.capstone.NotificationsFragment"
+        android:label="@string/title_notifications"
+        tools:layout="@layout/fragment_notifications" />
+
+    <fragment
+        android:id="@+id/navigation_SelectList"
+        android:name="com.example.capstone.SelectListFragment"
+        android:label="@string/title_SelectList"
+        tools:layout="@layout/fragment_selectlist" >
+
+    </fragment>
+</navigation>
