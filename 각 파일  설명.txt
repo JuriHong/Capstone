@@ -1,0 +1,82 @@
+아직 프래그먼트만 만들어 둔 파일(주석 X)
+
+FindIDFragment
+FindPWFragment
+NewPWFragment
+CustomDialog.java
+AppHelper.java
+
+----------------------------------------------------------------------------
+
+1. 자바 파일 설명  	  
+		   *capstone111 에 들어가야 함
+
+(1) 로그인 파트
+
+MainActivity.java - 상단 탭, 뒤로가기, 내비게이션 컨트롤러 설정
+
+LoginFragment.java 
+
+SignUpFragment.java
+
+FindIDFragment.java
+
+FindPWFragment.java
+
+NewPWFragment.java
+
+----------------------------------------------------------------------------
+
+(2) 메인 파트
+
+MainActivity2.java - 상단 탭, 뒤로가기, 내비게이션 컨트롤러, 바텀 내비게이션, 권한 설정
+
+HomeFragment.java - 지도화면
+
+DashboardFragment.java - 리스트 화면
+
+NotificationFragment.java - 설정 화면
+
+SelectListFragment.java - 경로 검색한 정보 리사이클러 뷰로 출력 화면( 아키텍처 설계도 기준 Path)
+
+
+<<<<<<<<<<
+
+ListAdapter.java - 리스트 화면에 리사이클러 뷰 제어용 클래스
+
+TrafficInfoAdapter.java - 아키텍처 설계도 기준 Path(SelectListFragment)화면에 
+			    리사이클러 뷰 제어용 클래스
+
+TrevelDataModel.java - 위도, 경도, 목적지 이름 클래스
+
+GeocordingTask.java - 목적지 이름 -> 좌표로 전환
+			   			    - AsyncTask 클래스(비동기 네트워크 요청용)
+ReverseGeocodingTask.java - 좌표 -> 목적지 주소로 전환 
+
+AppHelper.java - volley 라이브러리(네트워크 통신 라이브러리) RequestQueue 사용하기 위한 인터페이스
+
+datamodel 패키지 - 오디세이 API에 요청하면 JSON 형식으로 반환함. 
+		   그래서 datamodel 패키지 안에있는 클래스로 파싱함(GSON 이용)
+>>>>>>>>>>
+
+
+----------------------------------------------------------------------------
+
+2. XML 파일 설명
+
+
+drawable - 버튼 이미지, 백그라운드 리소스
+
+layout - 각 화면 레이아웃
+	- activity_main.xml( 로그인 파트)
+	- activity_main2.xml( 메인 파트)
+
+*** 지도, 리스트, 설정 프래그먼트는 menu, navigation에 동일한 아이디 지정
+menu - 바텀 네비게이션 ( 하단에 지도, 리스트, 설정 버튼) 아이콘, 이름 관리용 파일
+
+navigation - 내비게이션 컨트롤러로 제어 할 프래그먼트 등록
+	- login_navigation.xml( activity_main.xml에서 사용)
+	- mobile_navigation.xml( activity_main2.xml에서 사용)
+
+
+
