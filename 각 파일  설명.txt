@@ -10,8 +10,10 @@ AppHelper.java
 
 ----------------------------------------------------------------------------
 
-1. 자바 파일 설명  	  
-		   *capstone111 에 들어가야 함
+1. 자바 파일 설명  	   
+		* ReverseGeocodingTask.java 주석없음(GeocordingTask.java 주석 참고)
+		* MainActivity.java 먼저 보고 MainActivity2.java 확인
+
 
 (1) 로그인 파트
 
