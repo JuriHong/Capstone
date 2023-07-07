@@ -2,44 +2,141 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical">
 
-    <LinearLayout
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
-        <EditText
-            android:id="@+id/search_Geo"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:hint="목적지 주소 입력"
-            android:layout_weight="6"/>
+        android:layout_height="match_parent">
 
-        <Button
-            android:id="@+id/button1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="검색"
-            android:textColor="@color/white"
-            android:background="@color/material_dynamic_neutral30"/>
-        <Button
-            android:id="@+id/button2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="화면 전환"
-            android:textColor="@color/white"
-            android:background="@color/material_dynamic_neutral30"/>
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:id="@+id/mapView"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp">
+
+                <EditText
+                    android:id="@+id/search_Geo_EditText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="55dp"
+                    android:layout_weight="10"
+                    android:background="@drawable/edittext_background"
+                    android:textColor="#000000"
+                    android:text="남구 수영로295"/>
+
+                <Button
+                    android:id="@+id/search_Geo_Button"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginLeft="10dp"
+                    android:background="@drawable/searchbtn"/>
+
+                <Button
+                    android:id="@+id/GPS_Button"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:background="@drawable/location_btn_select"/>
+            </LinearLayout>
 
 
-    </LinearLayout>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="90dp"
+                android:layout_marginLeft="365dp">
 
-    <com.google.android.gms.maps.MapView
-        android:id="@+id/mapview"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        />
+                <Button
+                    android:id="@+id/zoomIn"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:background="@drawable/zoom_in_btn_select"/>
 
+                <Button
+                    android:id="@+id/zoomOut"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:background="@drawable/zoom_out_btn_select"/>
+
+            </LinearLayout>
+
+        </FrameLayout>
+
+
+        <LinearLayout
+            android:id="@+id/Bottom_Sheet_Layout"
+            android:layout_width="match_parent"
+            android:layout_height="400dp"
+            android:background="@drawable/background01"
+            android:orientation="vertical"
+            app:behavior_hideable="false"
+            app:behavior_peekHeight="32dp"
+            app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="30dp"
+                android:layout_marginLeft="5dp">
+
+                <Button
+                    android:id="@+id/Go_Destination_btn1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/custom_button_select"
+                    android:text="길 찾기"/>
+
+                <Button
+                    android:id="@+id/Save_Destination"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/custom_button_select"
+                    android:layout_marginLeft="5dp"
+                    android:text="목적지 저장"/>
+
+                <Button
+                    android:id="@+id/Close_BottomSheet"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/custom_button_select"
+                    android:layout_marginLeft="132dp"
+                    android:text="닫기"/>
+
+            </LinearLayout>
+
+            <EditText
+                android:id="@+id/Go_Destination_Edit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="70dp"
+                android:hint="출발지를 입력해주세요."
+                android:textSize="30dp"
+                android:layout_gravity="center"/>
+
+            <Button
+                android:id="@+id/Go_Destination_btn2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/custom_button_select"
+                android:text="목적지 검색"/>
+
+
+
+
+        </LinearLayout>
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
 
 </LinearLayout>

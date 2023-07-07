@@ -2,25 +2,29 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:background="@drawable/background01">
 
     <EditText
+        android:id="@+id/Id_EditView"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="160dp"
         android:layout_gravity="center"
         android:ems="10"
+        android:text="tkddg159159@naver.com"
         android:hint="ID"
         />
 
 
     <EditText
-        android:id="@+id/editTextTextPassword2"
+        android:id="@+id/Password_EditView"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
         android:layout_gravity="center"
         android:ems="10"
+        android:text="qwer1234"
         android:inputType="textPassword"
         android:hint="PW"/>
 
@@ -53,11 +57,12 @@
     </LinearLayout>
 
     <Button
-        android:id="@+id/LoginButton"
+        android:id="@+id/Login_Button"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
         android:layout_gravity="center"
+        android:background="@drawable/custom_button_select"
         android:text="로그인"/>
 
     <LinearLayout
@@ -67,7 +72,7 @@
         android:layout_marginTop="5dp">
 
         <Button
-            android:id="@+id/SignUpButton"
+            android:id="@+id/Sign_Up_Button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
@@ -75,18 +80,18 @@
             android:layout_weight="1"
             android:text="회원가입"
             android:textColor="#8E8686"
-            android:background="#ffffff"/>
+            android:background="#00FFFFFF"/>
         <Button
-            android:id="@+id/findIDButton"
+            android:id="@+id/find_ID_Button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:layout_gravity="center"
             android:text="ID 찾기"
             android:textColor="#8E8686"
-            android:background="#ffffff"/>
+            android:background="#00FFFFFF"/>
         <Button
-            android:id="@+id/findPWButton"
+            android:id="@+id/find_PW_Button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginRight="90dp"
@@ -94,7 +99,7 @@
             android:layout_gravity="center"
             android:text="PW 찾기"
             android:textColor="#8E8686"
-            android:background="#ffffff"/>
+            android:background="#00FFFFFF"/>
 
     </LinearLayout>
 
